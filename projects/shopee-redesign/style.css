@@ -1,0 +1,442 @@
+:root {
+    --shopee-orange: #EE4D2D;
+    --shopee-light-orange: #FFDCD1;
+    --shopee-background: #f5f5f5;
+}
+.logo{
+    width: 40px;
+    height: auto;
+    fill: white;
+}
+body {
+    background-color: var(--shopee-background);
+}
+
+.shopee-header-container {
+    background: linear-gradient(to bottom, var(--shopee-orange), #FF6633);
+    color: white;
+    padding-bottom: 0px;
+}
+
+.top-bar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+.top-bar-link { color: white; text-decoration: none; padding: 0 8px; border-right: 1px solid rgba(255, 255, 255, 0.2); }
+.top-bar-link:last-child, .top-bar-link.no-border { border-right: none; }
+.top-bar-link:hover { color: rgba(255, 255, 255, 0.7); }
+.social-icon { border: none; }
+
+/* Custom Narrower Main Container */
+main.container {
+    max-width: 1225px; /* You can change this value to make it wider or narrower */
+}
+.main-header { padding: 5px 0; }
+.search-bar .search-input-wrapper { position: relative; }
+.search-bar .form-control { border-radius: 2px; padding-right: 60px; height: 40px; }
+.search-bar .btn-shopee { position: absolute; right: 4px; top: 4px; bottom: 4px; width: 60px; border: none; border-radius: 2px; background-color: var(--shopee-orange); color: white; }
+.search-bar .btn-shopee:hover { background-color: #d44327; }
+.search-tags { margin-top: 5px; }
+.search-tags a { color: white; text-decoration: none; font-size: 0.75rem; margin-right: 15px; }
+.cart-icon a { color: white; position: relative; }
+
+/* Categories */
+.section-title { font-size: 1rem; color: #888; text-transform: uppercase; margin-bottom: 1rem; }
+.categories-grid { display: grid; grid-template-columns: repeat(10, 1fr); border-top: 1px solid #efefef; border-left: 1px solid #efefef; }
+.category-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #333; font-size: 0.8rem; text-align: center; padding: 15px 5px; border-right: 1px solid #efefef; border-bottom: 1px solid #efefef; }
+.category-item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1; position: relative; }
+.category-item img { width: 45px; height: 45px; margin-bottom: 10px; }
+
+/* Flash Deals */
+.flash-deals-title {
+    color: var(--shopee-orange);
+    font-weight: bold;
+}
+#flash-sale-timer {
+    background-color: #000;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+.see-all-link {
+    text-decoration: none;
+    color: var(--shopee-orange);
+}
+.flash-deals-container {
+    display: flex;
+    /* CHANGED: Reduced the gap for a tighter feel */
+    gap: 5px; 
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+/* Hide scrollbar for a cleaner look */
+.flash-deals-container::-webkit-scrollbar { 
+    display: none; 
+}
+.flash-deals-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.flash-product-card {
+    display: block;
+    text-decoration: none;
+    /* CHANGED: Reduced card width to make them smaller */
+    min-width: 70px; 
+    text-align: center;
+    /* ADDED: A subtle border to better define each card */
+    border: 1px solid #f0f0f0; 
+    border-radius: 2px;
+}
+.flash-product-card img {
+    width: 100%;
+}
+.flash-product-card .price {
+    font-size: 1.1rem;
+    color: var(--shopee-orange);
+    font-weight: 500;
+    margin: 8px 0;
+}
+.progress-bar-wrapper {
+    background: #FFDCD1;
+    border-radius: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    /* ADDED: Margin to space it out inside the card */
+    margin: 0 10px 10px 10px;
+}
+.progress-bar-inner {
+    background-color: var(--shopee-orange);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.progress-bar-wrapper span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+/* Daily Discover */
+.section-header-tabs { background: #fff; display: flex; border-bottom: 3px solid var(--shopee-orange); margin-top: 20px; }
+.tab-item { padding: 12px 20px; font-size: 1rem; color: var(--shopee-orange); font-weight: 500; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; padding: 10px; background: #fff; }
+.product-card { display: block; background: #fff; text-decoration: none; color: #333; border-radius: 2px; box-shadow: 0 1px 1px 0 rgba(0,0,0,.05); transition: transform 0.1s ease; border: 1px solid transparent; }
+.product-card:hover { transform: translateY(-3px); border-color: var(--shopee-orange); }
+.product-card img { width: 100%; }
+.product-info { padding: 10px; }
+.product-name { font-size: 0.8rem; height: 2.4em; line-height: 1.2em; overflow: hidden; margin-bottom: 10px; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; }
+.product-price { font-size: 1rem; color: var(--shopee-orange); }
+.product-sold { font-size: 0.75rem; color: #888; }
+
+/* Shopee Mall Section */
+
+.mall-title {
+    color: var(--shopee-orange);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* This targets every direct child section within the <main> container */
+main > section {
+    margin-bottom: 1rem !important; /* 1rem is Bootstrap's default for mb-4 */
+}
+
+/* This removes the margin from the very last section to avoid extra space at the bottom */
+main > section:last-child {
+    margin-bottom: 0 !important;
+}
+.mall-brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    height: 100%; /* This now works because the parent columns will have equal height */
+}
+
+.mall-brand-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.mall-brand-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* This is the key fix: using aspect-ratio instead of percentage height */
+.mall-brand-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Creates a perfect square for the image */
+    object-fit: contain; /* Ensures the whole logo is visible without being stretched */
+    padding: 5px; /* Adds some space around the logo */
+}
+
+.mall-brand-item span {
+    color: var(--shopee-orange);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 8px 4px;
+    background-color: #fafafa;
+}
+
+/* Ensure carousel image fills its container properly */
+.carousel-item img {
+    object-fit: cover;
+}
+
+/* Top Products Section */
+.top-products-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.top-products-container::-webkit-scrollbar { 
+    display: none; /* Hide scrollbar for a cleaner look */
+}
+
+.top-product-card {
+    display: block;
+    text-decoration: none;
+    min-width: 180px;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.top-product-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.top-product-card img {
+    width: 100%;
+    display: block;
+}
+
+.top-product-info {
+    padding: 10px;
+}
+
+.top-product-name {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+    /* Truncate long names */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-product-sold {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Top Products Section */
+.top-products-title {
+    font-weight: bold;
+    color: #555; /* Slightly different color to distinguish from Mall */
+}
+
+.top-products-grid {
+    display: grid;
+    /* This reuses the same grid layout as Daily Discover for consistency */
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 10px;
+}
+/* Footer Section */
+.shopee-footer {
+    background-color: #fbfbfb;
+    border-top: 4px solid var(--shopee-orange);
+    color: #555;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.footer-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--shopee-orange);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+}
+
+.social-links i {
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.logo-item {
+    background: white;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    height: 20px;
+}
+
+.footer-bottom {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    color: #888;
+    border-top: 1px solid #e0e0e0;
+}
+
+.countries-text a {
+    color: #888;
+    text-decoration: none;
+}
+
+.countries-text a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 991.98px) {
+    /* Hide the desktop top bar */
+    .top-bar {
+        display: none !important;
+    }
+    .main-header {
+        padding: 10px 0;
+    }
+    .shopee-header-container {
+        padding-bottom: 10px;
+    }
+    /* Make the hero section a single column and remove the negative margin */
+    .hero-section {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .hero-section .col-md-4 {
+        margin-top: 1rem;
+    }
+
+    /* Adjust the categories grid for mobile */
+    .categories-grid {
+        /* Change from 10 columns to 5 */
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .category-item span {
+        font-size: 0.7rem;
+    }
+    
+    /* Make the mall section stack vertically */
+    .shopee-mall-section .row {
+        flex-direction: column;
+    }
+    .mall-brands-grid {
+        /* Change from 4 columns to 2 for a better fit */
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Adjust the main product grid for mobile */
+    .product-grid, .top-products-grid {
+        /* Change from auto-fill to a strict 2-column grid */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px; /* Reduce gap on mobile */
+    }
+    
+    /* Make the footer stack vertically */
+    .shopee-footer .col-md {
+        margin-bottom: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .countries-text {
+        margin-top: 10px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 10px;
+    }
+}
+
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 575.98px) {
+    /* Make hero side banners stack instead of being side-by-side */
+    .hero-section .col-md-4 {
+        flex-direction: column;
+    }
+     .hero-side a:first-child {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Further reduce category grid columns for smallest screens */
+    .categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .category-item img {
+        width: 35px;
+        height: 35px;
+    }
+    .category-item span {
+        font-size: 0.6rem;
+    }
+    
+    /* Stack mall brands into 2x4 instead of 4x2 */
+    .mall-brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust Flash Deals titles for more space */
+    .flash-deals-section .d-flex {
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+    .flash-deals-title {
+        flex-basis: 100%; /* Make title take full width */
+        margin-bottom: 10px;
+    }
+    #flash-sale-timer {
+        margin-left: 0 !important; /* Remove left margin */
+    }
+}

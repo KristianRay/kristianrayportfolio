@@ -256,6 +256,8 @@ html {
 
 .projects a {
   text-decoration: none;
+  display: block;
+  width: 100%;
 }
 
 .projectHeader {
@@ -297,7 +299,10 @@ html {
 }
 
 .projectImg {
+  display: block;
   width: 100%;
+  height: 650px;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -359,7 +364,28 @@ html {
   color: #fff;
   padding: 20px;
   border-radius: 20px;
-  height: 24dvh;
+  height: 30dvh;
+}
+
+.calendlyButton {
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #ff6522;
+  padding: 16px;
+  border-radius: 40px;
+  width: 60%;
+  color: #ff6522;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  transition: all ease-in-out 0.4s;
+  margin-top: 12px;
+}
+
+.calendlyButton:hover {
+  background-color: #ff6522;
+  color: #fff;
 }
 
 .contactName {
@@ -594,13 +620,16 @@ html {
   }
 
   .projectImg {
+    height: 260px;
     border-radius: 18px;
   }
 
   /* CONTACT SECTION */
 
   .contact {
-    height: 20dvh;
+    height: auto;
+    padding: 32px 20px;
+    gap: 16px;
   }
 
   .contactName {
@@ -615,6 +644,12 @@ html {
   .contactButton button {
     font-size: 20px;
     letter-spacing: 0px;
+  }
+
+  .calendlyButton {
+    width: 88%;
+    font-size: 18px;
+    padding: 14px;
   }
 
   /* EXPERIENCE SECTION */

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kristianrayportfolio.vercel.app/sitemap.xml
